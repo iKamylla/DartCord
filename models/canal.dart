@@ -1,14 +1,14 @@
 import 'mensagem.dart';
 
 class Canal {
-    final String nome;
-    final List<Mensagem> mensagens = [];
+  final String nome;
+  final List<Mensagem> _mensagens = [];
 
-    Canal({
-        required this.nome,
-    });
+  Canal({required this.nome});
 
-    void addMensagem(Mensagem mensagem) {
-        mensagens.add(mensagem);
-    }
+  List<Mensagem> get mensagens => _mensagens;
+
+  void addMensagem(Mensagem mensagem) {
+    _mensagens.add(mensagem);
+  }
 }
